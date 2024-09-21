@@ -6,12 +6,10 @@ public class Polynomial {
     }
 
     public Polynomial(double[] coefficients) {
-        // Copy the input array to avoid mutation from the outside
         this.coefficients = coefficients.clone();
     }
 
     public Polynomial add(Polynomial other) {
-        // Get the degree of the two polynomials
         int maxDegree = Math.max(this.coefficients.length, other.coefficients.length);
         double[] resultCoefficients = new double[maxDegree];
 
